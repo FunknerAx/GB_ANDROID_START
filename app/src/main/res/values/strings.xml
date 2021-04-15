@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My First App</string>
+    <string name="button_change_text">change text</string>
+    <string name="switch_text">Change Color</string>
+    <string name="textViewHint">Введит тест для изменения TextView выше</string>
+
 </resources>
