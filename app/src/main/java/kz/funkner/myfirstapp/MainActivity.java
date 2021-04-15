@@ -3,6 +3,7 @@ package kz.funkner.myfirstapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         Button button = findViewById(R.id.button);
         final Switch switchBut = findViewById(R.id.switchBut);
         CheckBox checkBox = findViewById(R.id.checkBox);
-        final ToggleButton toggleButton = findViewById(R.id.toggleButton);
+        Button buttonSecondTask = findViewById(R.id.secondTask);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +55,13 @@ public class MainActivity extends AppCompatActivity {
                     textView.setTransitionAlpha(1.0f);
                 } else
                     textView.setTransitionAlpha(0.0f);
+            }
+        });
+
+        buttonSecondTask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, MainActivity2.class));
             }
         });
 
